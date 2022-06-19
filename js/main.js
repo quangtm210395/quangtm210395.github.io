@@ -113,6 +113,8 @@
         }
     });
 
+    
+
     window.addEventListener("load", function () {
         const form = document.getElementById('my-form');
         form.addEventListener("submit", function (e) {
@@ -124,9 +126,36 @@
                 method: 'POST',
                 body: data,
             }).then(() => {
-                    alert("Rất vui được tiếp đón quý anh/chị/bạn đến chung với gia đình chúng tớ!");
+                    $('#exampleModalCenter').modal('show');
                 })
         });
+
+        const getCountDown = (date, id) => {
+            var countDownDate = new Date(date).getTime();
+
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                    
+                var distance = countDownDate - now;
+                    
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                // Output the result in an element with id="demo"
+                document.getElementById(`${id}`).innerHTML = days + " ngày " + hours + " giờ "
+                + minutes + " phút " + seconds + " giây ";
+                    
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById(`${id}`).innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        }
+        getCountDown("Jul 9, 2022 16:00:00", "wife");
+        getCountDown("Jul 17, 2022 11:00:00", "husband");
+        
     });
 
 })(jQuery);
