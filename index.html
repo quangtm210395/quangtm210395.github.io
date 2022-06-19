@@ -423,14 +423,17 @@
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Đám cưới nhà gái</h4>
                         <p class="mb-2">Xóm 16, xã Bình Hòa, huyện Giao Thủy, tỉnh Nam Định</p>
-                        <p class="mb-0">16:00 ngày 9 tháng 7 năm 2022</p>
+                        <p class="mb-2">16:00 ngày 9 tháng 7 năm 2022</p>
+                        <p>Đếm ngược còn: <span id="wife"></span></p>
                     </div>
                     <div>
                         <p class="text-center text-md-right mr-md-3 mb-3 mt-3">Địa điểm nhà cô dâu</p>
-                        <iframe class="md-right"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d935.603818106007!2d106.45423283555023!3d20.28307125437887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313600b975f2ad77%3A0xdbec339c8b232e50!2zMjDCsDE2JzU5LjEiTiAxMDbCsDI3JzE5LjMiRQ!5e0!3m2!1svi!2s!4v1655188330054!5m2!1svi!2s"
-                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="d-flex justify-content-center">
+                            <iframe class="md-right"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d935.603818106007!2d106.45423283555023!3d20.28307125437887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313600b975f2ad77%3A0xdbec339c8b232e50!2zMjDCsDE2JzU5LjEiTiAxMDbCsDI3JzE5LjMiRQ!5e0!3m2!1svi!2s!4v1655188330054!5m2!1svi!2s"
+                                width="400" height="400" style="border:0; position: relative" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -438,14 +441,17 @@
                         <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
                         <h4 class="mb-3">Đám cưới nhà trai</h4>
                         <p class="mb-2">Điện Biên Phủ, thành phố Huế, tỉnh Thừa Thiên Huế</p>
-                        <p class="mb-0">11:00 - 13:00 ngày 17 tháng 7 năm 2022</p>
+                        <p class="mb-2">11:00 - 13:00 ngày 17 tháng 7 năm 2022</p>
+                        <p>Đếm ngược còn: <span id="husband"></span></p>
                     </div>
                     <div>
                         <p class="text-center text-md-left ml-md-3 mb-3 mt-3">Địa điểm nhà hàng tiệc cưới</p>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1913.3115676758734!2d107.57941884357705!3d16.443955541790377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1510caf9979%3A0x91573efaad86bd4b!2zTmjDoCBow6BuZyB0aeG7h2MgY8aw4bubaSBSb3NlIFBhbGFjZQ!5e0!3m2!1svi!2s!4v1655182247687!5m2!1svi!2s"
-                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="d-flex justify-content-center">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1913.3115676758734!2d107.57941884357705!3d16.443955541790377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1510caf9979%3A0x91573efaad86bd4b!2zTmjDoCBow6BuZyB0aeG7h2MgY8aw4bubaSBSb3NlIFBhbGFjZQ!5e0!3m2!1svi!2s!4v1655182247687!5m2!1svi!2s"
+                                width="400" height="400" style="border:0; position: relative" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -583,11 +589,11 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <input name="Name" type="text" class="form-control bg-secondary border-0 py-4 px-3"
-                                        placeholder="Tên của bạn" />
+                                        placeholder="Tên của bạn"/>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <input name="Phone" type="text" class="form-control bg-secondary border-0 py-4 px-3"
-                                        placeholder="SĐT của bạn" />
+                                        placeholder="SĐT của bạn"/>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -651,6 +657,22 @@
                     href="https://htmlcodex.com">hikariq</a>
             </p>
         </div>
+    </div>
+      
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            <div class="mb-3">
+                Rất vui được tiếp đón quý anh/chị/bạn đến chung với gia đình chúng tớ!
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Đồng ý</button>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
     <!-- Footer End -->
 
