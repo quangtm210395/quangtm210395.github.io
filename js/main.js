@@ -122,12 +122,24 @@
             const data = new FormData(form);
             data.forEach(d => console.log)
             const action = e.target.action;
+            const element = document.getElementById('register');
+            element.disabled = true;
             fetch(action, {
                 method: 'POST',
                 body: data,
             }).then(() => {
                     $('#exampleModalCenter').modal('show');
                 })
+        });
+
+        const submit = document.getElementById('okie');
+        submit.addEventListener("click", function (e) {
+            e.preventDefault();
+            $('#exampleModalCenter').modal('hide');
+            const element = document.getElementById('register');
+            element.disabled = false;
+            const form = document.getElementById('my-form');
+            form.reset()
         });
 
         const getCountDown = (date, id) => {
