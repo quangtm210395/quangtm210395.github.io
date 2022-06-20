@@ -153,7 +153,7 @@
                 }
             }, 1000);
         }
-        getCountDown("Jul 9, 2022 16:00:00", "wife");
+        getCountDown("Jul 9, 2022 18:00:00", "wife");
         getCountDown("Jul 17, 2022 11:00:00", "husband");
         
     });
