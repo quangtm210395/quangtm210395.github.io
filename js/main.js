@@ -142,6 +142,21 @@
             form.reset()
         });
 
+        const getCopy = (text) => {
+            const copyToClipBoard = document.getElementById(`${text}`);
+            copyToClipBoard.addEventListener("click", function (e) {
+                e.preventDefault();
+                navigator.clipboard.writeText(text);
+                document.getElementById(`code-${text}`).innerHTML = "Copied!";
+                setTimeout(() => {
+                    document.getElementById(`code-${text}`).innerHTML = text;
+                }, 500);
+            });
+        }
+        getCopy("00450831001");
+        getCopy("19033319717011");
+        getCopy("0xC7eF7bA241b496943cC6b9a27E94feA4cD6e5BfE");
+        
         const getCountDown = (date, id) => {
             var countDownDate = new Date(date).getTime();
 

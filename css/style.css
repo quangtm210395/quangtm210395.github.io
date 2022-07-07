@@ -530,6 +530,28 @@ mark,
   height: auto;
 }
 
+.img-qr {
+  width: 400px;
+  height: auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.qr-text {
+  width: 400px;
+  float: right;
+  cursor: pointer;
+}
+
+.metamask-text {
+  cursor: pointer;
+}
+
+.qr-text-left {
+  width: 400px;
+  cursor: pointer;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #FFFFFF;
