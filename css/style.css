@@ -531,14 +531,21 @@ mark,
 }
 
 .img-qr {
-  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.img-metamask {
+  width: 300px;
   height: auto;
   border: 1px solid lightgray;
   border-radius: 10px;
 }
 
 .qr-text {
-  width: 400px;
+  width: 100%;
   float: right;
   cursor: pointer;
 }
@@ -548,7 +555,7 @@ mark,
 }
 
 .qr-text-left {
-  width: 400px;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -9781,6 +9788,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 767.98px) {
   #event .border-right {
+    border-right: none !important;
+  }
+  #payment .border-right {
     border-right: none !important;
   }
 }

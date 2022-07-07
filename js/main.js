@@ -147,9 +147,10 @@
             copyToClipBoard.addEventListener("click", function (e) {
                 e.preventDefault();
                 navigator.clipboard.writeText(text);
+                const currentText = document.getElementById(`code-${text}`).innerHTML
                 document.getElementById(`code-${text}`).innerHTML = "Copied!";
                 setTimeout(() => {
-                    document.getElementById(`code-${text}`).innerHTML = text;
+                    document.getElementById(`code-${text}`).innerHTML = currentText;
                 }, 500);
             });
         }
